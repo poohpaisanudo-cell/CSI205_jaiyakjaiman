@@ -1,26 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>การ์ดข้อมูลบุคคล</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f4f6fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid #e2e8f0;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e2e8f0;
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #2b2d42;
+    }
+
+    .card .nickname {
+      font-size: 0.95rem;
+      color: #6c757d;
+      margin-top: 4px;
+    }
+
+    .info {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #3a3d52;
+      text-align: left;
+    }
+
+    .info strong {
+      color: #2b2d42;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .card-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="card-container">
+    <!-- บุคคล 1 -->
     <div class="card">
-        <img src="https://image.cdn2.seaart.ai/2023-06-06/31427237187653/5bbfcc33fc2bebbc13079e2c4b0dc3e31f646617_high.webp" alt="โปรไพล์ ภูไพศาล">
-      <h2>นายภูไพศาล อุดมเพชรไพศาล 67088026</h2>
+      <img src="https://studentscms.spu.ac.th/stdempimg.cfm?empstdtype=STD&vdata=01DECFEBDF82FBA50529CEDED706C8D282E41E0CD7F8DBD6" alt="โปรไฟล์ ภูไพศาล">
+      <h2>ภูไพศาล อุดมเพชรไพศาล</h2>
       <div class="nickname">ชื่อเล่น: ภู</div>
-      <div class="info"><p><strong>อายุ:</strong> 19 ปี</p>
-        <p><strong>คณะ/สาขา:</strong> เทคโนโลยีสารสนเทศ วิทยาการคอมพิวเตอร์นวัตกรรมเเละพัฒนาซอฟเเวร์</p>
+      <div class="info">
+        <p><strong>อายุ:</strong> 19 ปี</p>
+        <p><strong>คณะ/สาขา:</strong> เทคโนโลยีสารสนเทศ วิทยาการคอมพิวเตอร์</p>
+      </div>
+    </div>
+
+    <!-- บุคคล 2 -->
+    <div class="card">
+      <img src="https://picsum.photos/seed/p2/200" alt="โปรไฟล์ ฟ้าใส">
+      <h2>ฟ้าใส นวมทอง</h2>
+      <div class="nickname">ชื่อเล่น: ฟ้า</div>
+      <div class="info">
+        <p><strong>อายุ:</strong> 19 ปี</p>
+        <p><strong>คณะ/สาขา:</strong> ศิลปกรรมศาสตร์ ดนตรี</p>
+      </div>
+    </div>
+
+    <!-- บุคคล 3 -->
+    <div class="card">
+      <img src="https://picsum.photos/seed/p3/200" alt="โปรไฟล์ ภัทรกร">
+      <h2>ภัทรกร จันทร์ฉาย</h2>
+      <div class="nickname">ชื่อเล่น: กร</div>
+      <div class="info">
+        <p><strong>อายุ:</strong> 21 ปี</p>
+        <p><strong>คณะ/สาขา:</strong> นิเทศศาสตร์ สื่อสารมวลชน</p>
       </div>
     </div>
   </div>
-   <div class="card">
-        <img src="https://image.cdn2.seaart.ai/2023-06-06/31427237187653/5bbfcc33fc2bebbc13079e2c4b0dc3e31f646617_high.webp" alt="โปรไพล์ ภูไพศาล">
-      <h2>นายธนพงศ์ เกิดศิริ 67087918</h2>
-      <div class="nickname">ชื่อเล่น: ป้อง</div>
-      <div class="info"><p><strong>อายุ:</strong> 19 ปี</p>
-        <p><strong>คณะ/สาขา:</strong> เทคโนโลยีสารสนเทศ วิทยาการคอมพิวเตอร์นวัตกรรมเเละพัฒนาซอฟเเวร์</p>
+  <div class="card">
+      <img src="https://picsum.photos/seed/p3/200" alt="โปรไฟล์ ภัทรกร">
+      <h2>ภัทรกร จันทร์ฉาย</h2>
+      <div class="nickname">ชื่อเล่น: กร</div>
+      <div class="info">
+        <p><strong>อายุ:</strong> 21 ปี</p>
+        <p><strong>คณะ/สาขา:</strong> นิเทศศาสตร์ สื่อสารมวลชน</p>
       </div>
     </div>
   </div>
