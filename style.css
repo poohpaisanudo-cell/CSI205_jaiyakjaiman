@@ -11,8 +11,8 @@ body {
     .card-container {
     display: flex;
     flex-direction: row;
-    gap: 16px; /* ระยะห่างระหว่างการ์ด */
-    flex-wrap: nowrap; /* ไม่ขึ้นบรรทัดใหม่ */
+    gap: 16px;
+    flex-wrap: nowrap;
     max-width: 1500px;
     padding: 10px;
     width: 100%;
