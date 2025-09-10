@@ -9,16 +9,16 @@ body {
     }
 
     .card-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1000px;
-      width: 100%;
-      padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px; /* ระยะห่างระหว่างการ์ด */
+    flex-wrap: nowrap; /* ไม่ขึ้นบรรทัดใหม่ */
+    max-width: 1500px;
+    padding: 10px;
+    width: 100%;
     }
-
     .card {
-      background: #fff;
+      background: #ffffff;
       border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       padding: 20px;
@@ -72,3 +72,4 @@ body {
       border: 3px solid #e2e8f0;
       margin-bottom: 12px;
     }
+    
